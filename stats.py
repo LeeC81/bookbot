@@ -15,3 +15,19 @@ def char_count(string):
         else:
             char_dict[char] = 1
     return char_dict
+
+
+def sort_dict(dict):
+     sorted_dicts = []
+     for d in dict:
+         if d not in sorted_dicts and d.isalpha():
+             sorted_dicts.append({"char": d, "count": dict[d]})
+     sorted_dicts.sort(reverse=True, key=lambda x: x['count'])
+     return sorted_dicts
+
+
+
+
+
+
+
